@@ -1,0 +1,1009 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background: #f8f5ef;
+    color: #4f493e;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   PEMBUKA
+===================================================== */
+
+#opening {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf8,
+            #eeeae1
+        );
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+#opening.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.opening-content {
+    width: min(90%, 500px);
+    text-align: center;
+}
+
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #90754b;
+    margin-bottom: 15px;
+}
+
+
+.opening-content h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(45px, 10vw, 75px);
+    font-weight: 400;
+    color: #90754b;
+    margin-bottom: 25px;
+}
+
+
+.opening-content h1 span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   AMPLOP
+===================================================== */
+
+.envelope-container {
+    position: relative;
+
+    width: min(90vw, 420px);
+    margin: auto;
+
+    border-radius: 6px;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18);
+
+    transition: .4s ease;
+}
+
+
+.envelope-container:hover {
+    transform: scale(1.02);
+}
+
+
+.envelope-image {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(70,65,55,.8);
+    color: white;
+
+    font-size: 28px;
+
+    padding-left: 4px;
+}
+
+
+.click-text {
+    margin-top: 15px;
+
+    font-family: Arial, sans-serif;
+
+    color: #967a50;
+}
+
+
+.guest {
+    margin-top: 50px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: #665e53;
+}
+
+
+.guest strong {
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   UNDANGAN
+===================================================== */
+
+.hidden {
+    display: none;
+}
+
+
+#invitation {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f8f5ef;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("assets/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(30,35,25,.25),
+            rgba(30,35,25,.6)
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 30px;
+}
+
+
+.hero-small {
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+.hero h1 {
+    margin: 20px 0;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(60px, 14vw, 110px);
+
+    font-weight: 400;
+}
+
+
+.hero h1 span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: .5em;
+}
+
+
+.date {
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+
+.scroll-button {
+    margin-top: 40px;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.1);
+
+    color: white;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* =====================================================
+   SECTION UMUM
+===================================================== */
+
+section {
+    padding: 90px 20px;
+}
+
+
+.section-label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #9a8056;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+}
+
+
+section h2 {
+
+    text-align: center;
+
+    font-size: clamp(35px, 8vw, 55px);
+
+    font-weight: 400;
+
+    color: #605849;
+
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   VIDEO 3D
+===================================================== */
+
+.video-section {
+
+    background: #f4f0e8;
+
+    text-align: center;
+}
+
+
+.video-frame {
+
+    width: min(92vw, 430px);
+    
+    aspect-ration: 9/16;
+
+    margin: auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.15);
+
+    background: #222;
+}
+
+
+.video-frame video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+
+    text-align: center;
+
+    background: #faf8f3;
+}
+
+
+.flower {
+
+    font-size: 50px;
+
+    color: #9c8155;
+
+    margin-bottom: 25px;
+}
+
+
+.arabic {
+
+    font-size: 23px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+
+.quote-text {
+
+    width: min(90%, 600px);
+
+    margin: auto;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+
+.quote span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color: #92784e;
+}
+
+
+/* =====================================================
+   MEMPELAI
+===================================================== */
+
+.couple-section {
+
+    background: #f2efe8;
+
+    text-align: center;
+}
+
+
+.couple-container {
+
+    width: min(100%, 900px);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+.person {
+
+    flex: 1;
+
+    max-width: 350px;
+}
+
+
+.ornament-frame {
+
+    position: relative;
+
+    padding: 15px;
+
+    border: 2px solid #ddd6c8;
+
+    border-radius: 40% 40% 45% 45%;
+
+    background: #fff;
+}
+
+
+.ornament-frame img {
+
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+
+    border-radius: 38% 38% 42% 42%;
+}
+
+
+.person h3 {
+
+    margin-top: 25px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    color: #876c43;
+}
+
+
+.person p {
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.ampersand {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    color: #9a7c4d;
+}
+
+
+/* =====================================================
+   SAVE DATE
+===================================================== */
+
+.save-date {
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(55,66,45,.9),
+            rgba(55,66,45,.9)
+        ),
+        url("assets/save-date.jpg");
+
+    background-size: cover;
+
+    color: white;
+}
+
+
+.save-date h2 {
+
+    color: white;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+}
+
+
+.save-date > p:not(.section-label) {
+
+    font-size: 20px;
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+}
+
+
+.countdown div {
+
+    width: 90px;
+
+    padding: 15px 5px;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.08);
+}
+
+
+.countdown span {
+
+    display: block;
+
+    font-size: 32px;
+}
+
+
+.countdown small {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   ACARA
+===================================================== */
+
+.event-section {
+
+    text-align: center;
+
+    background: #faf8f3;
+}
+
+
+.event-card {
+
+    width: min(100%, 500px);
+
+    margin: 25px auto;
+
+    padding: 40px 25px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+
+.event-icon {
+
+    font-size: 40px;
+
+    color: #90754b;
+
+    margin-bottom: 15px;
+}
+
+
+.event-card h3 {
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #746143;
+
+    margin-bottom: 15px;
+}
+
+
+.event-card p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+.map-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background: #58634e;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   GALERI
+===================================================== */
+
+.gallery-section {
+
+    background: #f1eee7;
+}
+
+
+.gallery {
+
+    width: min(100%, 900px);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.gallery img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1.2;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.gallery img:hover {
+
+    transform: scale(.98);
+}
+
+
+/* =====================================================
+   UCAPAN
+===================================================== */
+
+.wishes-section {
+
+    background: #faf8f3;
+
+    text-align: center;
+}
+
+
+#wishForm {
+
+    width: min(100%, 600px);
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+#wishForm input,
+#wishForm textarea,
+#wishForm select {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd5c7;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+#wishForm textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+#wishForm button {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #59644f;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 17px;
+}
+
+
+#wishList {
+
+    width: min(100%, 600px);
+
+    margin: 30px auto;
+
+    text-align: left;
+}
+
+
+.wish {
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+
+.wish strong {
+
+    color: #796344;
+}
+
+
+.wish p {
+
+    margin-top: 5px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   PENUTUP
+===================================================== */
+
+.closing {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #354332;
+
+    color: white;
+}
+
+
+.closing h2 {
+
+    color: white;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 75px;
+
+    margin: 0;
+}
+
+
+.closing p {
+
+    font-size: 30px;
+
+    margin: 20px;
+}
+
+
+/* =====================================================
+   NAVIGASI BAWAH
+===================================================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    z-index: 500;
+
+    bottom: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(94%, 600px);
+
+    padding: 8px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background: rgba(255,250,235,.92);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.15);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.bottom-nav button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #766a58;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    min-width: 45px;
+}
+
+
+.bottom-nav span {
+
+    font-size: 20px;
+}
+
+
+.bottom-nav small {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 18px;
+    }
+
+
+    .couple-container {
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    .person {
+
+        width: min(100%, 330px);
+    }
+
+
+    .ampersand {
+
+        font-size: 45px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .bottom-nav {
+
+        bottom: 10px;
+    }
+
+
+    .bottom-nav small {
+
+        font-size: 7px;
+    }
+
+}
